@@ -1,0 +1,7 @@
+.hero-banner {
+    color: black;
+    position: relative;
+    background-image: url("../../assets/banner.jpg");
+    background-size: cover;
+    background-position: center;
+  }
