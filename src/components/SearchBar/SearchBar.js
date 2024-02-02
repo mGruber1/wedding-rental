@@ -8,7 +8,7 @@ const SearchBar = () => {
                     <input type="text" class="form-control me-2" id="searchbox" placeholder="Search Wedding Rentals"></input>
                     <button type="button" class="btn btn-primary">Search</button>
                 </div>
-            </form>
+            </form>d
         </div>
     )
 }
