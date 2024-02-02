@@ -7,6 +7,8 @@ const SearchBar = () => {
                 <div className="form-group d-flex">
                     <input type="text" class="form-control me-2" id="searchbox" placeholder="Search Wedding Rentals"></input>
                     <button type="button" class="btn btn-primary">Search</button>
+
+                    a
                 </div>
             </form>
         </div>
