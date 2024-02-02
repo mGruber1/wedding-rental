@@ -8,6 +8,11 @@ import SearchResults from './components/SearchResults/SearchResults';
 function App() {
   const [searchValue, setSearchValue] = useState("");
   const [searchResults, setSearchResults] = useState([]);
+  const [cart, setCart] = useState([]);
+
+  const addToCart = (product) => {
+    setCart((prevCart) => [...prevCart, product]);
+  };
 
   const apiURL = `${process.env.REACT_APP_APIURL}?title=${searchValue}`;
 
@@ -39,7 +44,7 @@ function App() {
     <div className="app">
       <HeroBanner />
       <SearchBar setSearchValue={setSearchValue} />
-      <SearchResults searchResults={searchResults} />
+      <SearchResults searchResults={searchResults} cart={cart} addToCart={addToCart} />
     </div>
   );
 }
