@@ -43,7 +43,7 @@ function App() {
   return (
     <div className="app">
       <HeroBanner />
-      <SearchBar setSearchValue={setSearchValue} />
+      <SearchBar setSearchValue={setSearchValue} cart={cart} />
       <SearchResults searchResults={searchResults} cart={cart} addToCart={addToCart} />
     </div>
   );
