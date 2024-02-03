@@ -13,7 +13,7 @@ const SearchBar = (props) => {
                         onChange={(e) => props.setSearchValue(e.target.value)}>
                     </input>
                     <button type="button" className="btn btn-primary me-2">Search</button>
-                    {props.cart.length !== 0 ? <Cart cart={props.cart}></Cart> : ""}
+                    {props.cart.length !== 0 && <Cart cart={props.cart}></Cart>}
 
                 </div>
             </form>
