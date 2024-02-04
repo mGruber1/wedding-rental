@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import HeroBanner from './components/HeroBanner/HeroBanner';
-import SearchBar from './components/SearchBar/SearchBar';
-import SearchResults from './components/SearchResults/SearchResults';
+import React, { useEffect, useState } from 'react';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import './App.css';
+import Cart from './components/Cart/Cart';
+import LandingPage from './components/LandingPage/LandingPage';
 
 function App() {
   const [searchValue, setSearchValue] = useState("");
@@ -42,9 +42,20 @@ function App() {
 
   return (
     <div className="app">
-      <HeroBanner />
-      <SearchBar setSearchValue={setSearchValue} cart={cart} />
-      <SearchResults searchResults={searchResults} cart={cart} addToCart={addToCart} />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<LandingPage
+            setSearchValue={setSearchValue}
+            searchResults={searchResults}
+            setSearchResults={setSearchResults}
+            cart={cart}
+            addToCart={addToCart}>
+          </LandingPage>}>
+          </Route>
+          <Route path="/cart" element={<Cart />} />
+        </Routes>
+      </BrowserRouter>
+
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import Cart from "../Cart/Cart";
+import CartIcon from "../Cart/CartIcon";
 
 const SearchBar = (props) => {
     return (
@@ -12,8 +12,7 @@ const SearchBar = (props) => {
                         placeholder="Search Wedding Rentals"
                         onChange={(e) => props.setSearchValue(e.target.value)}>
                     </input>
-                    <button type="button" className="btn btn-primary me-2">Search</button>
-                    {props.cart.length !== 0 && <Cart cart={props.cart}></Cart>}
+                    {props.cart.length !== 0 && <CartIcon cart={props.cart}></CartIcon>}
 
                 </div>
             </form>
