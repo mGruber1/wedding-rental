@@ -36,6 +36,12 @@ function App() {
     }
   };
 
+  const removeFromCart = (itemId) => {
+    const updatedCart = cart.filter((item) => item.id !== itemId);
+
+    setCart(updatedCart);
+  };
+
   useEffect(() => {
     getSearchResults();
   }, [searchValue, apiURL]);
@@ -52,7 +58,7 @@ function App() {
             addToCart={addToCart}>
           </LandingPage>}>
           </Route>
-          <Route path="/cart" element={<Cart cart={cart} />} />
+          <Route path="/cart" element={<Cart cart={cart} removeItem={removeFromCart} />} />
         </Routes>
       </BrowserRouter>
 
