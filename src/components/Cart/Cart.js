@@ -1,7 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Cart = (props) => {
     const totalCost = props.cart.reduce((acc, item) => acc + item.price, 0);
+    const navigate = useNavigate();
+
+    if (props.cart.length === 0) {
+        navigate("/");
+    }
 
     return (
         <div className="container">

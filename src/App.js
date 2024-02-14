@@ -58,7 +58,7 @@ function App() {
             addToCart={addToCart}>
           </LandingPage>}>
           </Route>
-          <Route path="/cart" element={<Cart cart={cart} removeItem={removeFromCart} />} />
+          <Route path="/cart" element={<Cart cart={cart} removeItem={removeFromCart} />}></Route>
         </Routes>
       </BrowserRouter>
 
