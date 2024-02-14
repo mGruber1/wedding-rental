@@ -1,6 +1,8 @@
 import React from "react";
 
 const Cart = (props) => {
+    const totalCost = props.cart.reduce((acc, item) => acc + item.price, 0);
+
     return (
         <div className="container">
             <div className="row mt-4">
@@ -35,9 +37,24 @@ const Cart = (props) => {
                     }
 
                 </div>
-                <div className="col">col 2</div>
+                <div className="col d-flex align-items-center justify-content-center">
+                    <div className="card w-100">
+                        <div className="card-title p-2">
+                            <span>Shopping Cart Overview</span>
+                        </div>
+                        <div className="card-body">
+                            <table className="table">
+                                <tr>
+                                    <td><span>SubTotal</span></td>
+                                    <td><span>{totalCost} €</span></td>
+                                </tr>
+                            </table>
+                            <button type="button" className="btn btn-primary w-100">Checkout</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </div >
     )
 }
 
