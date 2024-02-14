@@ -5,7 +5,6 @@ const CartIcon = (props) => {
     const navigate = useNavigate();
 
     const handleClick = () => {
-        console.log("click");
         navigate("/cart");
     }
 

@@ -52,7 +52,7 @@ function App() {
             addToCart={addToCart}>
           </LandingPage>}>
           </Route>
-          <Route path="/cart" element={<Cart />} />
+          <Route path="/cart" element={<Cart cart={cart} />} />
         </Routes>
       </BrowserRouter>
 
